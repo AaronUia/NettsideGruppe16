@@ -5,7 +5,7 @@
 #       context: .
 #       dockerfile: WebApplication1/Dockerfile
 
-# For å komme inn i databasen fra terminalen: 
+# For Ã¥ komme inn i databasen fra terminalen: 
 
 # docker exec -it mariadb mariadb -u root -p
 
@@ -16,10 +16,10 @@ services:
     image: mariadb:latest
     container_name: mariadb
     environment:
-      MYSQL_ROOT_PASSWORD: Deadpool77
+      MYSQL_ROOT_PASSWORD: hei123
       MYSQL_DATABASE: webapplication
       MYSQL_USER: root
-      MYSQL_PASSWORD: Deadpool77
+      MYSQL_PASSWORD: hei123
     ports:
       - "3306:3306"
     volumes:
@@ -37,7 +37,7 @@ services:
     depends_on:
       - mariadb
     environment:
-      ConnectionStrings__DefaultConnection: "Server=mariadb;Database=webapplication;User=root;Password=Deadpool77;"
+      ConnectionStrings__DefaultConnection: "Server=mariadb;Database=webapplication;User=root;Password=hei123;"
     networks:
       - backend
 
